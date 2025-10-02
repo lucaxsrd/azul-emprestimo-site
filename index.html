@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azul Empréstimos - Sua Solução Financeira em Aracruz</title>
+    <meta name="description" content="Azul Empréstimos em Aracruz - Empréstimos consignados, cartão de crédito, consórcios e financiamentos. Soluções financeiras com as melhores condições do mercado.">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/sections.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/images/LOGO AZUL EMPRESTIMO 2.png" alt="Azul Empréstimo" style="height: 45px; width: auto;">
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">Início</a></li>
+                <li><a href="#services" class="nav-link">Serviços</a></li>
+                <li><a href="#consorcios" class="nav-link">Consórcios</a></li>
+                <li><a href="#portfolio" class="nav-link">Outros Serviços</a></li>
+                <li><a href="#help" class="nav-link">Ajuda</a></li>
+                <li><a href="#" class="nav-link ads-btn" onclick="openAdsModal()">
+                    <i class="fas fa-star"></i> Oportunidades
+                </a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Soluções Financeiras <span>Inteligentes</span></h1>
+                <p class="hero-subtitle">Seu parceiro de confiança em crédito e empréstimos em Aracruz</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="openWhatsAppSimulacao()">
+                        <i class="fas fa-calculator"></i>
+                        Simulação Gratuita
+                    </button>
+                    <button class="btn-secondary" onclick="scrollToSection('services')">
+                        <i class="fas fa-info-circle"></i>
+                        Nossos Serviços
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-contact-form">
+                    <div class="form-header">
+                        <i class="fas fa-calculator"></i>
+                        <h3>Solicite sua Simulação</h3>
+                        <p>Preencha e receba uma proposta em até 2 horas</p>
+                    </div>
+                    <form id="heroContactForm" class="hero-form">
+                        <div class="form-group">
+                            <input type="text" name="nome" placeholder="Nome completo" autocomplete="name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Seu e-mail" autocomplete="email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="whatsapp" placeholder="WhatsApp" autocomplete="tel" required>
+                        </div>
+                        <div class="form-group">
+                            <select name="servico" required>
+                                <option value="">Serviço de interesse</option>
+                                <option value="Crédito Consignado">Crédito Consignado</option>
+                                <option value="Empréstimo FGTS">Empréstimo FGTS</option>
+                                <option value="Crédito Pessoal">Crédito Pessoal</option>
+                                <option value="Consórcio">Consórcio</option>
+                                <option value="Cartão de Crédito">Cartão de Crédito</option>
+                                <option value="AzulPay">AzulPay</option>
+                                <option value="Seguros">Seguros</option>
+                                <option value="Outros">Outros</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="valor" placeholder="Valor desejado (R$)">
+                        </div>
+                        <button type="submit" class="btn-hero-submit">
+                            <i class="fas fa-paper-plane"></i>
+                            Solicitar Proposta
+                        </button>
+                        <p class="form-note">
+                            <i class="fas fa-shield-check"></i>
+                            Seus dados estão seguros conosco
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossos Serviços</h2>
+                <p>Oferecemos as melhores soluções financeiras do mercado</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Crédito Consignado</h3>
+                    <p>Taxas especiais para aposentados, pensionistas e servidores públicos com desconto direto na folha.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Menores taxas do mercado</li>
+                        <li><i class="fas fa-check"></i> Aprovação rápida</li>
+                        <li><i class="fas fa-check"></i> Sem consulta ao SPC/Serasa</li>
+                    </ul>
+                </div>
+                <div class="service-card featured">
+                    <div class="service-badge">Mais Popular</div>
+                    <div class="service-icon">
+                        <i class="fas fa-piggy-bank"></i>
+                    </div>
+                    <h3>Empréstimo FGTS</h3>
+                    <p>Antecipe seu saldo do FGTS de forma rápida e segura, sem sair de casa.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Liberação em até 24h</li>
+                        <li><i class="fas fa-check"></i> Sem burocracia</li>
+                        <li><i class="fas fa-check"></i> 100% online</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Crédito Pessoal e PJ</h3>
+                    <p>Soluções personalizadas para pessoa física e jurídica com condições especiais.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Análise personalizada</li>
+                        <li><i class="fas fa-check"></i> Flexibilidade de prazos</li>
+                        <li><i class="fas fa-check"></i> Atendimento especializado</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>Cartão de Crédito</h3>
+                    <p>Cartão especial para aposentados e pensionistas com condições exclusivas.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Sem anuidade</li>
+                        <li><i class="fas fa-check"></i> Limite pré-aprovado</li>
+                        <li><i class="fas fa-check"></i> Para aposentados INSS</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Consórcios</h3>
+                    <p>Realize seus projetos de forma planejada e econômica com nossos grupos de consórcio.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Cartas contempladas</li>
+                        <li><i class="fas fa-check"></i> Melhores administradoras</li>
+                        <li><i class="fas fa-check"></i> Suporte completo</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Completa de Consórcios -->
+    <section id="consorcios" class="consorcio-section">
+        <!-- Hero dos Consórcios -->
+        <div class="consorcio-hero">
+            <div class="container">
+                <div class="consorcio-hero-content">
+                    <div class="hero-text">
+                        <h1>Consórcio Azul Empréstimo</h1>
+                        <h2>Realize Seus Sonhos Sem Juros!</h2>
+                        <p>Uma maneira inteligente e econômica de conquistar seu veículo, imóvel ou serviços. No consórcio, você paga apenas o valor do bem - sem juros abusivos.</p>
+                        
+                        <div class="hero-badges">
+                            <div class="badge">
+                                <i class="fas fa-percentage"></i>
+                                <span>0% Juros</span>
+                            </div>
+                            <div class="badge">
+                                <i class="fas fa-clock"></i>
+                                <span>Até 120 meses</span>
+                            </div>
+                            <div class="badge">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>100% Seguro</span>
+                            </div>
+                        </div>
+                        
+                        <div class="cta-buttons">
+                            <button class="btn-secondary" onclick="openWhatsAppEspecialista()">
+                                <i class="fab fa-whatsapp"></i> Falar com Especialista
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-card">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Anos de Experiência</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">5.000+</div>
+                            <div class="stat-label">Clientes Satisfeitos</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">98%</div>
+                            <div class="stat-label">Taxa de Aprovação</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carrossel de Modalidades -->
+        <div class="consorcio-carousel">
+            <div class="container">
+                <div class="carousel-container">
+                    <div class="carousel-wrapper">
+                        <div class="carousel-track" id="carouselTrack">
+                            <div class="carousel-slide active">
+                                <img src="assets/images/CONSORCIO 2.png" alt="Consórcio Veículo" class="carousel-image">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/images/CONSORCIO 3.png" alt="Consórcio Moto" class="carousel-image">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/images/CONSORCIO 4.png" alt="Consórcio Serviços" class="carousel-image">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/images/CONSORCIO 5.png" alt="Consórcio Pesado" class="carousel-image">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/images/CONSORCIO 5.png" alt="Consórcio Contemplado" class="carousel-image">
+                            </div>
+                        </div>
+                        <button class="carousel-btn carousel-prev" onclick="previousSlide()">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-btn carousel-next" onclick="nextSlide()">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="carousel-dots" id="carouselDots">
+                        <span class="dot active" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                        <span class="dot" onclick="currentSlide(5)"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Benefícios do Consórcio -->
+        <div class="consorcio-benefits">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Por Que Escolher Nosso Consórcio?</h2>
+                    <p>Vantagens exclusivas que fazem toda a diferença</p>
+                </div>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-ban"></i>
+                        </div>
+                        <h3>Sem Juros</h3>
+                        <p>Você paga apenas o valor do bem, sem juros abusivos que encarecem o financiamento</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h3>Flexibilidade</h3>
+                        <p>Parcelas que cabem no seu bolso com prazos de até 120 meses</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </div>
+                        <h3>Antecipação</h3>
+                        <p>Possibilidade de antecipar parcelas e reduzir o tempo de pagamento</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3>Contemplação</h3>
+                        <p>Seja por sorteio ou lance, você tem chances mensais de ser contemplado</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Valorização</h3>
+                        <p>Seu dinheiro não perde valor com a inflação, mantendo o poder de compra</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Atendimento</h3>
+                        <p>Suporte especializado em todas as etapas do seu consórcio</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Como Funciona -->
+        <div class="consorcio-howworks">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Como Funciona o Consórcio?</h2>
+                    <p>Entenda o passo a passo de forma simples e clara</p>
+                </div>
+                
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Escolha sua Modalidade</h3>
+                            <p>Selecione entre veículos, motos, imóveis, serviços ou equipamentos pesados</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Faça sua Simulação</h3>
+                            <p>Calculamos a parcela ideal para seu orçamento e definimos o prazo</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Adesão ao Grupo</h3>
+                            <p>Você entra para um grupo de consórcio e começa a pagar suas parcelas</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Contemplação</h3>
+                            <p>Seja contemplado por sorteio mensal ou ofereça um lance para antecipar</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Realize seu Sonho</h3>
+                            <p>Com a carta de crédito em mãos, você pode comprar seu bem dos sonhos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Final -->
+        <div class="consorcio-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <div class="cta-text">
+                        <h2>Pronto para Realizar Seu Sonho?</h2>
+                        <p>Faça sua simulação gratuitamente e descubra como o consórcio pode transformar seus planos em realidade</p>
+                    </div>
+                    <div class="cta-actions">
+                        <button class="btn-primary large" onclick="openWhatsAppConsorcio()">
+                            <i class="fas fa-calculator"></i>
+                            Fazer Simulação Gratuita
+                        </button>
+                        <p class="cta-note">
+                            <i class="fas fa-shield-check"></i>
+                            Simulação 100% gratuita e sem compromisso
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2>Outros Serviços</h2>
+                <p>Conheça outras soluções financeiras que oferecemos</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-image" style="background-image: url('assets/images/FINANCIAMENTO-IMOBILIARIO.png'); background-size: cover; background-position: center;">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Financiamento Imobiliário</h3>
+                        <p>Mais de 500 famílias realizaram o sonho da casa própria</p>
+                        <div class="portfolio-stats">
+                            <span class="stat">R$ 50M+ em crédito liberado</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image" style="background-image: url('assets/images/FINANCIAMENTO VEICULOS.png'); background-size: cover; background-position: center;">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Financiamento Veículos</h3>
+                        <p>Milhares de veículos financiados com as melhores condições</p>
+                        <div class="portfolio-stats">
+                            <span class="stat">2000+ veículos financiados</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image" style="background-image: url('assets/images/CREDITO PARA EMPRESA.png'); background-size: cover; background-position: center;">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Crédito Empresarial</h3>
+                        <p>Apoiamos o crescimento de empresas locais em Aracruz</p>
+                        <div class="portfolio-stats">
+                            <span class="stat">200+ empresas atendidas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Help Section -->
+    <section id="help" class="help">
+        <div class="container">
+            <div class="section-header">
+                <h2>Centro de Ajuda</h2>
+                <p>Tire suas dúvidas sobre nossos serviços</p>
+            </div>
+            <div class="help-content">
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Como solicitar um empréstimo?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Entre em contato conosco através do formulário de contato ou e-mail. Nossa equipe irá orientá-lo sobre a documentação necessária e todo o processo.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Quais documentos são necessários?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Geralmente precisamos de RG, CPF, comprovante de residência e renda. Para casos específicos, nossa equipe informará documentos adicionais.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Qual o prazo para aprovação?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>O prazo varia conforme o produto: FGTS em até 24h, consignado até 5 dias úteis, e outros produtos até 7 dias úteis.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Trabalham com nome negativado?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sim! Temos produtos específicos como o crédito consignado que não consulta SPC/Serasa e outras soluções para quem está negativado.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="help-sidebar">
+                    <div class="help-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>E-mail</h3>
+                        <p>Envie sua dúvida ou solicitação</p>
+                        <a href="mailto:azulemprestimoaracruz@gmail.com" class="help-link">azulemprestimoaracruz@gmail.com</a>
+                    </div>
+                    <div class="help-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Endereço</h3>
+                        <p>Venha nos visitar em nosso escritório</p>
+                        <div class="address-info">
+                            <p><strong>R. José Alves da Costa, 56</strong><br>
+                            Sala 310 - Centro<br>
+                            Aracruz - ES, 29190-920</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="social-section">
+        <div class="container">
+            <div class="social-content">
+                <h3>Siga-nos nas Redes Sociais</h3>
+                <p>Fique por dentro das novidades e promoções exclusivas</p>
+                <div class="social-links" id="socialLinks">
+                    <a href="https://www.facebook.com/profile.php?id=61575925683121" target="_blank" class="social-link facebook" data-social="facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="https://www.instagram.com/azul.emprestimo_aracruz/" target="_blank" class="social-link instagram" data-social="instagram">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Azul Empréstimo</h3>
+                    <p>Seu parceiro de confiança em soluções financeiras em Aracruz e região.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Serviços</h4>
+                    <ul>
+                        <li><a href="#services">Crédito Consignado</a></li>
+                        <li><a href="#services">Empréstimo FGTS</a></li>
+                        <li><a href="#services">Crédito Pessoal</a></li>
+                        <li><a href="#services">Consórcios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> azulemprestimoaracruz@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> R. José Alves da Costa, 56 - Sala 310</li>
+                        <li style="margin-left: 20px;">Centro, Aracruz - ES, 29190-920</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Azul Empréstimo Aracruz. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Ads Modal -->
+    <div id="adsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Oportunidades e Promoções</h3>
+                <span class="close" onclick="closeAdsModal()">&times;</span>
+            </div>
+            <div class="modal-body" id="adsContent">
+                <div class="ads-container">
+                    <div class="ad-item featured-ad">
+                        <div class="ad-badge">Promoção Especial</div>
+                        <h4>Taxa Zero para Consignado INSS</h4>
+                        <p>Por tempo limitado! Empréstimo consignado para aposentados e pensionistas com taxa zero na primeira parcela.</p>
+                        <div class="ad-details">
+                            <span class="ad-condition">Válido até: 31/10/2025</span>
+                            <button class="ad-btn" onclick="openWhatsApp(); closeAdsModal();">Solicitar Agora</button>
+                        </div>
+                    </div>
+                    <div class="ad-item">
+                        <h4>FGTS Liberado em 24h</h4>
+                        <p>Antecipe seu FGTS com aprovação expressa. Dinheiro na conta em até 24 horas.</p>
+                        <button class="ad-btn secondary" onclick="openWhatsApp(); closeAdsModal();">Saiba Mais</button>
+                    </div>
+                    <div class="ad-item">
+                        <h4>Consórcio Contemplado Disponível</h4>
+                        <p>Cartas contempladas de veículos e imóveis com condições especiais.</p>
+                        <button class="ad-btn secondary" onclick="openWhatsApp(); closeAdsModal();">Consultar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botão WhatsApp Flutuante -->
+    <div class="whatsapp-float" id="whatsappFloat">
+        <a href="https://wa.me/5527996098641?text=Olá,%20vi%20no%20site%20a%20respeito%20de%20serviços%20financeiros,%20pode%20me%20falar%20mais%20a%20respeito?" target="_blank" class="whatsapp-btn">
+            <img src="assets/images/LOGO AZUL EMPRESTIMO (branca).png" alt="Azul Empréstimo WhatsApp" class="whatsapp-logo">
+            <i class="fab fa-whatsapp whatsapp-icon"></i>
+        </a>
+    </div>
+
+    <!-- Scripts - Ordem correta de carregamento -->
+    <script src="assets/js/components.js"></script>
+    <script src="assets/js/forms.js"></script>
+    <script src="assets/js/whatsapp.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
